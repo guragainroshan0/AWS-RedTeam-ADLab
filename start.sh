@@ -18,7 +18,7 @@ aws s3api create-bucket --bucket this-is-a-fake-s3-bucket-roshan-$(echo $random_
 
 cd terraform
 
-sed -i "s/roshan-/roshan-$(echo $random_number)/" vars.tf
+sed -i "s/roshan/roshan-$(echo $random_number)/" vars.tf
 
 
 terraform init
