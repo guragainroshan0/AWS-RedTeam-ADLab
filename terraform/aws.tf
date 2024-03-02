@@ -1,8 +1,7 @@
 # Basic AWS configuration which will grab our keys from the AWS CLI
 # If you are not using the keys in the default profile of aws cli, then change below to the profile name 
 provider "aws" {
-  profile = "default"
-  region     = "eu-west-2"
+  region     = "us-east-1"
 }
 
 # Our AWS keypair
@@ -304,7 +303,7 @@ resource "aws_security_group" "second-sg" {
 }
 
 # Add first.local MOF's to S3
-resource "aws_s3_bucket_object" "first-dc-mof" {
+resource "aws_s3_object" "first-dc-mof" {
   bucket     = var.SSM_S3_BUCKET
   key        = "Lab/First.mof"
   source     = "../dsc/Lab/First.mof"
@@ -312,7 +311,7 @@ resource "aws_s3_bucket_object" "first-dc-mof" {
 }
 
 # Add second.local MOF's to S3
-resource "aws_s3_bucket_object" "second-dc-mof" {
+resource "aws_s3_object" "second-dc-mof" {
   bucket     = var.SSM_S3_BUCKET
   key        = "Lab/Second.mof"
   source     = "../dsc/Lab/Second.mof"
@@ -320,7 +319,7 @@ resource "aws_s3_bucket_object" "second-dc-mof" {
 }
 
 # Add userserver MOF's to S3
-resource "aws_s3_bucket_object" "user-server-mof" {
+resource "aws_s3_object" "user-server-mof" {
   bucket     = var.SSM_S3_BUCKET
   key        = "Lab/UserServer.mof"
   source     = "../dsc/Lab/UserServer.mof"

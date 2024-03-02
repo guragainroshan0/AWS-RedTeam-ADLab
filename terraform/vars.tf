@@ -1,13 +1,13 @@
 variable "PATH_TO_PUBLIC_KEY" {
   # Add the path to the public key you made in AWS like below
   # default = "./keys/terraform-key.pub"
-  default = "YOUR_PUBLIC_KEY"
+  default = "~/.ssh/id_rsa.pub"
 }
 
 variable "PATH_TO_PRIVATE_KEY" {
   # Add the path to the private key you made in AWS like below
   # default = "./keys/terraform-key.pem"
-  default = "YOUR_PRIVATE_KEY"
+  default = "~/.ssh/id_rsa"
 }
 
 variable "VPC_CIDR" {
@@ -45,13 +45,13 @@ variable "PUBLIC_DNS" {
 variable "MANAGEMENT_IPS" {
   # Add in the public IP Address you will be hitting the cloud from, for example the public IP of your home address or VPN
   #default = ["1.2.3.4/32"]
-  default = ["YOUR_PUBLIC_IP"]
+  default = ["0.0.0.0/0"]
 }
 
 variable "SSM_S3_BUCKET" {
   # Add in the name of your S3 bucket like the example below
   #default = "this-is-just-a-fake-bucket"
-  default = "YOUR_S3_BUCKET"
+  default = "this-is-a-fake-s3-bucket-roshan"
 }
 
 data "aws_ami" "latest-windows-server" {
