@@ -1,7 +1,7 @@
 # Basic AWS configuration which will grab our keys from the AWS CLI
 # If you are not using the keys in the default profile of aws cli, then change below to the profile name 
 provider "aws" {
-  region     = "us-east-1"
+  region     = "eu-west-2"
 }
 
 # Our AWS keypair
