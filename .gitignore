@@ -1,6 +1,5 @@
 terraform/keys/*
 terraform/.terraform.lock.hcl
 terraform/.terraform/
-dsc/Lab/*
 terraform/terraform*
 terraform/.terraform*
