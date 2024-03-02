@@ -1,13 +1,13 @@
 variable "PATH_TO_PUBLIC_KEY" {
   # Add the path to the public key you made in AWS like below
   # default = "./keys/terraform-key.pub"
-  default = "~/.ssh/id_rsa.pub"
+  default = "~/.ssh/id_rsa_ad.pub"
 }
 
 variable "PATH_TO_PRIVATE_KEY" {
   # Add the path to the private key you made in AWS like below
   # default = "./keys/terraform-key.pem"
-  default = "~/.ssh/id_rsa"
+  default = "~/.ssh/id_rsa_ad"
 }
 
 variable "VPC_CIDR" {
