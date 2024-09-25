@@ -1,7 +1,7 @@
 # Basic AWS configuration which will grab our keys from the AWS CLI
 # If you are not using the keys in the default profile of aws cli, then change below to the profile name 
 provider "aws" {
-  region     = "eu-west-2"
+  region     = "us-east-1"
 }
 
 # Our AWS keypair
@@ -34,7 +34,7 @@ resource "aws_subnet" "first-vpc-subnet" {
   vpc_id = aws_vpc.lab-vpc.id
 
   cidr_block        = var.FIRST_SUBNET_CIDR
-  availability_zone = "eu-west-2a"
+  availability_zone = "us-east-1a"
 
   tags = {
     Name = "First Subnet"
@@ -46,7 +46,7 @@ resource "aws_subnet" "second-vpc-subnet" {
   vpc_id = aws_vpc.lab-vpc.id
 
   cidr_block        = var.SECOND_SUBNET_CIDR
-  availability_zone = "eu-west-2a"
+  availability_zone = "eu-we-2a"
 
   tags = {
     Name = "Second Subnet"
