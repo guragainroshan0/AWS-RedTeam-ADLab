@@ -46,7 +46,7 @@ resource "aws_subnet" "second-vpc-subnet" {
   vpc_id = aws_vpc.lab-vpc.id
 
   cidr_block        = var.SECOND_SUBNET_CIDR
-  availability_zone = "eu-we-2a"
+  availability_zone = "us-east-1a"
 
   tags = {
     Name = "Second Subnet"
