@@ -14,7 +14,7 @@ ssh-keygen -f ~/.ssh/id_rsa_ad -P ""
 # create s3 bucket
 random_number=$(od -vAn -N2 -tu2 < /dev/urandom)
 
-aws s3api create-bucket --bucket this-is-a-fake-s3-bucket-roshan-$(echo $random_number) --region eu-west-2 --create-bucket-configuration LocationConstraint=eu-west-2
+aws s3api create-bucket --bucket this-is-a-fake-s3-bucket-roshan-$(echo $random_number) --region us-east-1 # --create-bucket-configuration LocationConstraint=eu-west-2
 
 cd terraform
 
